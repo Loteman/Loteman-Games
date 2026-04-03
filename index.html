@@ -387,6 +387,21 @@
     .game-card-milmila .game-name { color: #8de08d; }
     .game-card-chess .game-name { color: var(--teal-light); }
     .game-card-cards .game-name { color: #b0a0ff; }
+    .game-card-guessword .game-name { color: #f5c842; }
+    .game-thumb-guessword {
+      background: linear-gradient(135deg, #1a1400 0%, #2e2200 100%);
+    }
+    .word-pattern {
+      position: absolute; inset: 0; overflow: hidden;
+    }
+    .word-pattern::before {
+      content: 'נחש תמילה נחש תמילה נחש תמילה נחש תמילה נחש תמילה נחש תמילה נחש תמילה נחש תמילה נחש תמילה נחש תמילה נחש תמילה נחש תמילה נחש תמילה נחש תמילה נחש תמילה נחש תמילה נחש תמילה נחש תמילה נחש תמילה נחש תמילה';
+      position: absolute; inset: 0;
+      font-size: 1.3rem; font-weight: 900; letter-spacing: 0.15em;
+      color: rgba(245,200,66,0.13); line-height: 2.0;
+      word-break: break-all; padding: 10px;
+      font-family: 'Assistant', sans-serif;
+    }
 
     /* ---- ABOUT SECTION ---- */
     #about {
@@ -542,7 +557,7 @@
     </div>
     <div class="hero-stats">
       <div class="stat">
-        <div class="stat-num">3</div>
+        <div class="stat-num">4</div>
         <div class="stat-label">משחקים</div>
       </div>
       <div class="stat">
@@ -567,7 +582,7 @@
   <div class="games-intro reveal">
     <div class="section-label">המשחקים שלנו</div>
     <h2 class="section-title">
-      שלושה משחקים,<br/>
+      ארבעה משחקים,<br/>
       <span>אין סוף כיף</span>
     </h2>
   </div>
@@ -652,6 +667,32 @@
       </div>
     </div>
 
+    <!-- GuessWord -->
+    <div class="game-card game-card-guessword reveal">
+      <div class="game-thumb game-thumb-guessword">
+        <div class="word-pattern"></div>
+        <div class="game-icon-large">🗣️</div>
+      </div>
+      <div class="game-body">
+        <div class="game-platform">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+          אתר אינטרנט
+        </div>
+        <div class="game-name">נחש ת'מילה 🗣️</div>
+        <div class="game-desc">
+          משחק מילים תחרותי לקבוצות! הסבירו מילים לחברי הקבוצה שלכם בזמן מוגבל ואספו נקודות. מי יגיע ראשון ליעד?
+        </div>
+        <a href="https://loteman.github.io/GuessWord/" target="_blank" class="game-link">
+          שחק עכשיו
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M7 17L17 7M17 7H7M17 7v10"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
   </div>
 
   <!-- Android developer page link -->
@@ -688,7 +729,7 @@
         אני מאמין שמשחקים טובים לא חייבים להיות ענקיים. כל משחק שאני בונה הוא מעשה אהבה — <strong>פשוט, מכור, ומהנה</strong>.
       </p>
       <p class="about-p">
-        עד עכשיו פיתחתי <strong>3 משחקים</strong>: אפליקציה לאנדרואיד ושני אתרי משחקים, וכולם חינמיים לחלוטין.
+        עד עכשיו פיתחתי <strong>4 משחקים</strong>: אפליקציה לאנדרואיד ושלושה אתרי משחקים, וכולם חינמיים לחלוטין.
       </p>
       <div class="about-tags">
         <span class="tag">🎮 אינדי גיים דב</span>
