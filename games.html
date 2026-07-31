@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>כל המשחקים | Loteman Games</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700;900&family=Assistant:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<!-- Custom cursor -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- Header -->
+<div class="games-page-header">
+  <a href="index.html" class="back-btn">
+    ← חזור לדף הבית
+  </a>
+  <span class="games-page-title">כל המשחקים</span>
+</div>
+
+<!-- Search & Filter -->
+<div class="games-controls">
+  <input
+    type="search"
+    id="games-search"
+    class="games-search-input"
+    placeholder="🔍  חיפוש משחק..."
+  />
+  <div class="filter-tabs">
+    <button class="filter-tab active" data-filter="all">הכל</button>
+    <button class="filter-tab" data-filter="web">אתר אינטרנט</button>
+    <button class="filter-tab" data-filter="android">אנדרואיד</button>
+  </div>
+</div>
+
+<!-- Games Grid -->
+<div class="games-page-grid">
+
+  <div class="game-card game-card-milmila reveal" data-platform="android" data-name="מילמילה">
+    <div class="game-thumb game-thumb-milmila">
+      <img src="assets/logos/MilMila-Logo.png" alt="מילמילה" class="game-logo" />
+    </div>
+    <div class="game-body">
+      <div class="game-platform">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 15.341a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5zm-11.046 0a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5zM12 2.25C6.615 2.25 2.25 6.615 2.25 12c0 2.43.865 4.655 2.29 6.387L3.22 19.72a.75.75 0 1 0 1.06 1.06l1.344-1.343A9.713 9.713 0 0 0 12 21.75c5.385 0 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25z"/></svg>
+        אנדרואיד
+      </div>
+      <div class="game-name">מילמילה 🟩</div>
+      <div class="game-desc">וורדל בעברית! נחשו את המילה הסודית תוך 6 ניסיונות. משחק מילים יומי מקסים שמאתגר את כל יודעי השפה העברית.</div>
+      <a href="https://play.google.com/store/apps/details?id=io.lotemangames.com.unity.template.mobile2D&hl=he" target="_blank" class="game-link">
+        הורד מ-Google Play
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="game-card game-card-chess reveal" data-platform="web" data-name="chessbits שחמט">
+    <div class="game-thumb game-thumb-chess">
+      <div class="chess-pattern"></div>
+      <div class="game-icon-large">♟️</div>
+    </div>
+    <div class="game-body">
+      <div class="game-platform">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        אתר אינטרנט
+      </div>
+      <div class="game-name">ChessBits ♟</div>
+      <div class="game-desc">מיני-משחקי שחמט מגניבים! וריאציות יצירתיות ומאתגרות של שחמט קלאסי. מושלם לשחקנים חדשים וותיקים כאחד.</div>
+      <a href="https://loteman.github.io/Mini-Chess-Games/" target="_blank" class="game-link">
+        שחק עכשיו
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="game-card game-card-cards reveal" data-platform="web" data-name="משחקי קלפים">
+    <div class="game-thumb game-thumb-cards">
+      <div class="card-pattern"></div>
+      <div class="game-icon-large">🃏</div>
+    </div>
+    <div class="game-body">
+      <div class="game-platform">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        אתר אינטרנט
+      </div>
+      <div class="game-name">משחקי הקלפים של לוטמן 🃏</div>
+      <div class="game-desc">אוסף משחקי קלפים קלאסיים ומקוריים. שעות של כיף עם חברים ומשפחה, ישירות מהדפדפן — ללא התקנה.</div>
+      <a href="https://loteman.github.io/Loteman_Card_Games/" target="_blank" class="game-link">
+        שחק עכשיו
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="game-card game-card-guessword reveal" data-platform="web" data-name="נחש תמילה alias">
+    <div class="game-thumb game-thumb-guessword">
+      <div class="word-pattern"></div>
+      <div class="game-icon-large">🗣️</div>
+    </div>
+    <div class="game-body">
+      <div class="game-platform">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        אתר אינטרנט
+      </div>
+      <div class="game-name">נחש ת'מילה 🗣️</div>
+      <div class="game-desc">משחק מילים תחרותי לקבוצות! הסבירו מילים לחברי הקבוצה שלכם בזמן מוגבל ואספו נקודות. מי יגיע ראשון ליעד?</div>
+      <a href="https://loteman.github.io/GuessWord/" target="_blank" class="game-link">
+        שחק עכשיו
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="game-card game-card-category reveal" data-platform="web" data-name="מה בקטגוריה">
+    <div class="game-thumb game-thumb-category">
+      <div class="game-icon-large">🏷️</div>
+    </div>
+    <div class="game-body">
+      <div class="game-platform">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        אתר אינטרנט
+      </div>
+      <div class="game-name">מה בקטגוריה? 🏷️</div>
+      <div class="game-desc">השופט יודע את הקטגוריה הסודית — כולם מנסים לנחש אותה דרך דוגמאות. מי ינצח קודם — המנחשים או השופט?</div>
+      <a href="https://loteman.github.io/Categorys/" target="_blank" class="game-link">
+        שחק עכשיו
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="game-card game-card-hirtotim reveal" data-platform="web" data-name="חירטוטים">
+    <div class="game-thumb game-thumb-hirtotim">
+      <div class="game-icon-large">🤥</div>
+    </div>
+    <div class="game-body">
+      <div class="game-platform">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        אתר אינטרנט
+      </div>
+      <div class="game-name">חירטוטים 🤥</div>
+      <div class="game-desc">רק תשובות שגויות (אבל הגיוניות) זוכות! ענו על שאלות עם תשובות לא נכונות שעדיין מתאימות לקטגוריה.</div>
+      <a href="https://loteman.github.io/Opposites/" target="_blank" class="game-link">
+        שחק עכשיו
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="game-card game-card-imposter reveal" data-platform="web" data-name="המתחזה">
+    <div class="game-thumb game-thumb-imposter">
+      <div class="word-pattern word-pattern-imposter"></div>
+      <div class="game-icon-large">🕵️</div>
+    </div>
+    <div class="game-body">
+      <div class="game-platform">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        אתר אינטרנט
+      </div>
+      <div class="game-name">המתחזה 🕵️</div>
+      <div class="game-desc">משחק חברתי עם חברים! לכולם יש מילה משותפת חוץ מהמתחזה. דברו, רמזו ונסו לחשוף מי מבין הקבוצה לא יודע את המילה.</div>
+      <a href="https://loteman.github.io/Imposter/" target="_blank" class="game-link">
+        שחק עכשיו
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="no-results" id="no-results" style="display:none;">לא נמצאו משחקים מתאימים</div>
+
+</div>
+
+<!-- Google Play link -->
+<div class="games-page-footer reveal">
+  <a href="https://play.google.com/store/apps/developer?id=Loteman+Games&hl=he"
+     target="_blank" class="btn-outline">
+    כל המשחקים שלנו ב-Google Play →
+  </a>
+</div>
+
+<script src="js/app.js"></script>
+<script>
+  const searchInput = document.getElementById('games-search');
+  const filterTabs  = document.querySelectorAll('.filter-tab');
+  const cards       = document.querySelectorAll('.game-card[data-platform]');
+  const noResults   = document.getElementById('no-results');
+
+  let currentFilter = 'all';
+  let currentSearch = '';
+
+  function applyFilters() {
+    let visible = 0;
+    cards.forEach(card => {
+      const matchesFilter = currentFilter === 'all' || card.dataset.platform === currentFilter;
+      const searchTarget  = (card.dataset.name + ' ' + card.querySelector('.game-desc').textContent).toLowerCase();
+      const matchesSearch = !currentSearch || searchTarget.includes(currentSearch);
+      if (matchesFilter && matchesSearch) {
+        card.classList.remove('hidden');
+        visible++;
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+    noResults.style.display = visible === 0 ? 'block' : 'none';
+  }
+
+  searchInput.addEventListener('input', e => {
+    currentSearch = e.target.value.toLowerCase().trim();
+    applyFilters();
+  });
+
+  filterTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      filterTabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      currentFilter = tab.dataset.filter;
+      applyFilters();
+    });
+  });
+</script>
+</body>
+</html>
