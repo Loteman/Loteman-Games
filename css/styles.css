@@ -261,7 +261,7 @@
 
     .games-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(auto-fill, minmax(min(260px, calc(50% - 12px)), 1fr));
       gap: 24px;
     }
 
@@ -288,7 +288,7 @@
     .game-card:hover::before { opacity: 1; }
 
     .game-thumb {
-      height: 190px;
+      height: clamp(120px, 26vw, 190px);
       display: flex; align-items: center; justify-content: center;
       font-size: 5rem;
       position: relative; overflow: hidden;
@@ -411,10 +411,25 @@
       word-break: break-all; padding: 10px;
       font-family: 'Assistant', sans-serif;
     }
-      content: 'נחש תמילה נחש תמילה נחש תמילה נחש תמילה נחש תמילה נחש תמילה נחש תמילה נחש תמילה נחש תמילה נחש תמילה נחש תמילה נחש תמילה נחש תמילה נחש תמילה נחש תמילה נחש תמילה נחש תמילה נחש תמילה נחש תמילה נחש תמילה';
+    .category-pattern {
+      position: absolute; inset: 0; overflow: hidden;
+    }
+    .category-pattern::before {
+      content: 'קטגוריה קטגוריה קטגוריה קטגוריה קטגוריה קטגוריה קטגוריה קטגוריה קטגוריה קטגוריה קטגוריה קטגוריה קטגוריה קטגוריה קטגוריה קטגוריה קטגוריה קטגוריה קטגוריה קטגוריה';
       position: absolute; inset: 0;
       font-size: 1.3rem; font-weight: 900; letter-spacing: 0.15em;
-      color: rgba(245,200,66,0.13); line-height: 2.0;
+      color: rgba(184,126,255,0.15); line-height: 2.0;
+      word-break: break-all; padding: 10px;
+      font-family: 'Assistant', sans-serif;
+    }
+    .hirtotim-pattern {
+      position: absolute; inset: 0; overflow: hidden;
+    }
+    .hirtotim-pattern::before {
+      content: 'חירטוט חירטוט חירטוט חירטוט חירטוט חירטוט חירטוט חירטוט חירטוט חירטוט חירטוט חירטוט חירטוט חירטוט חירטוט חירטוט חירטוט חירטוט חירטוט חירטוט חירטוט';
+      position: absolute; inset: 0;
+      font-size: 1.3rem; font-weight: 900; letter-spacing: 0.15em;
+      color: rgba(45,212,191,0.15); line-height: 2.0;
       word-break: break-all; padding: 10px;
       font-family: 'Assistant', sans-serif;
     }
@@ -563,7 +578,7 @@
     .filter-tab.active { background: var(--teal); border-color: var(--teal); color: var(--black); }
     .games-page-grid {
       padding: 28px 5vw 60px;
-      display: grid; grid-template-columns: repeat(2, 1fr);
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(min(260px, calc(50% - 12px)), 1fr));
       gap: 24px; max-width: 900px; margin: 0 auto; width: 100%;
     }
     .game-card.hidden { display: none; }
