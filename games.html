@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700;900&family=Assistant:wght@300;400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/styles.css?v=4" />
 </head>
 <body>
 
@@ -173,6 +173,14 @@
     </div>
   </div>
 
+  <div class="game-card game-card-soon reveal" id="soon-card" aria-hidden="true">
+    <div class="game-card-soon-inner">
+      <div class="game-card-soon-emoji">🚀</div>
+      <div class="game-card-soon-title">עוד משחקים בדרך</div>
+      <div class="game-card-soon-sub">בקרוב...</div>
+    </div>
+  </div>
+
   <div class="no-results" id="no-results" style="display:none;">לא נמצאו משחקים מתאימים</div>
 
 </div>
@@ -208,6 +216,7 @@
         card.classList.add('hidden');
       }
     });
+    document.getElementById('soon-card').classList.toggle('hidden', currentFilter !== 'all' || currentSearch !== '');
     noResults.style.display = visible === 0 ? 'block' : 'none';
   }
 

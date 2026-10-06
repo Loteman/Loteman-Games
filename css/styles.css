@@ -91,7 +91,7 @@
       display: flex; flex-direction: column;
       align-items: center; justify-content: center;
       position: relative; overflow: hidden;
-      padding: 120px 5vw 80px;
+      padding: 120px 5vw 130px;
       text-align: center;
     }
 
@@ -226,7 +226,7 @@
 
     /* ---- SCROLL INDICATOR ---- */
     .scroll-hint {
-      position: absolute; bottom: 36px; left: 50%; transform: translateX(-50%);
+      position: absolute; bottom: 24px; left: 0; right: 0;
       display: flex; flex-direction: column; align-items: center; gap: 8px;
       opacity: 0.4; font-size: 0.75rem; color: var(--teal-light);
       animation: fadeUp 1s 0.8s ease both;
@@ -553,7 +553,7 @@
     .games-controls {
       padding: 28px 5vw 0;
       display: flex; flex-direction: column; gap: 14px;
-      max-width: 900px; margin: 0 auto; width: 100%;
+      max-width: 1600px; margin: 0 auto; width: 100%;
     }
     .games-search-input {
       width: 100%; padding: 14px 18px;
@@ -579,7 +579,7 @@
     .games-page-grid {
       padding: 28px 5vw 60px;
       display: grid; grid-template-columns: repeat(auto-fill, minmax(min(260px, calc(50% - 12px)), 1fr));
-      gap: 24px; max-width: 900px; margin: 0 auto; width: 100%;
+      gap: 24px; max-width: 1600px; margin: 0 auto; width: 100%;
     }
     .game-card.hidden { display: none; }
     .no-results {
@@ -596,4 +596,51 @@
       .about-visual { display: none; }
       nav { display: none; }
       .hero-stats { gap: 28px; }
+    }
+
+    /* ---- "COMING SOON" FILLER CARD (phones only) ---- */
+    .game-card-soon { display: none; }
+    .game-card-soon-inner {
+      flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 6px; padding: 14px 10px; text-align: center;
+    }
+    .game-card-soon-emoji { font-size: 2rem; line-height: 1; }
+    .game-card-soon-title { font-size: 0.98rem; font-weight: 900; color: var(--teal-light); }
+    .game-card-soon-sub { font-size: 0.74rem; color: rgba(245,245,240,0.45); font-family: 'Assistant', sans-serif; }
+
+    /* ---- COMPACT GAME CARDS ON PHONES ---- */
+    @media (max-width: 600px) {
+      .game-card-soon:not(.hidden) { display: flex; border-style: dashed; background: transparent; }
+      #games { padding: 56px 4vw; }
+      .games-intro { margin-bottom: 28px; }
+
+      .games-grid, .games-page-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+      .games-page-grid { padding: 16px 4vw 40px; }
+      .games-controls { padding: 16px 4vw 0; }
+
+      .game-card { border-radius: 14px; }
+      .game-card:hover { transform: none; }
+      .game-thumb { height: 76px; }
+      .game-logo { width: 48px; height: 48px; border-radius: 11px; }
+      .game-icon-large { font-size: 2.2rem; }
+      .chess-pattern { background-size: 24px 24px; background-position: 0 0, 0 12px, 12px -12px, -12px 0; }
+      .word-pattern::before, .category-pattern::before, .hirtotim-pattern::before,
+      .word-pattern-imposter::before { font-size: 0.8rem; padding: 4px; line-height: 1.8; }
+
+      .game-body { padding: 10px; }
+      .game-platform { font-size: 0.62rem; padding: 2px 7px; margin-bottom: 8px; gap: 4px; }
+      .game-name { font-size: 0.98rem; line-height: 1.25; margin-bottom: 4px; }
+      .game-desc {
+        font-size: 0.74rem; line-height: 1.45; margin-bottom: 10px;
+        display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+      }
+      .game-link {
+        width: 100%; justify-content: center; align-self: stretch;
+        padding: 7px 8px; font-size: 0.74rem; gap: 5px; border-radius: 8px;
+      }
+      .game-link svg { width: 11px; height: 11px; }
+      .game-link:hover { transform: none; }
     }
