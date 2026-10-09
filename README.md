@@ -1,4 +1,4 @@
 # Loteman-Games
 Loteman Games website
 
-https://loteman.github.io/Loteman-Games
+https://games.loteman.com/
