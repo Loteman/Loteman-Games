@@ -1,4 +1,4 @@
-﻿:root {
+:root {
       --teal: #3dbfbf;
       --teal-dark: #2a9d9d;
       --teal-deeper: #1a7a7a;
@@ -434,6 +434,41 @@
       font-family: 'Assistant', sans-serif;
     }
 
+    /* ---- TOOLS SECTION ---- */
+    #tools { background: linear-gradient(180deg, #0a1515 0%, var(--black) 100%); }
+    .game-links { display: flex; flex-wrap: wrap; gap: 8px; align-self: flex-start; }
+    .game-link-alt {
+      background: transparent;
+      border-color: rgba(245,245,240,0.18);
+      color: rgba(245,245,240,0.7);
+    }
+    .game-link-alt:hover { background: rgba(245,245,240,0.08); }
+    .game-thumb-geeks { background: linear-gradient(135deg, #1f0a24 0%, #3a1240 100%); }
+    .game-thumb-tvtime { background: linear-gradient(135deg, #0a1424 0%, #11305a 100%); }
+    .game-thumb-climb { background: linear-gradient(135deg, #1c1408 0%, #3a2a12 100%); }
+    .game-card-geeks .game-name { color: #e879f9; }
+    .game-card-tvtime .game-name { color: #60a5fa; }
+    .game-card-climb .game-name { color: #e0a96d; }
+    .geeks-pattern, .tvtime-pattern, .climb-pattern { position: absolute; inset: 0; overflow: hidden; }
+    .geeks-pattern::before, .tvtime-pattern::before, .climb-pattern::before {
+      position: absolute; inset: 0;
+      font-size: 1.3rem; font-weight: 900; letter-spacing: 0.15em;
+      line-height: 2.0; word-break: break-all; padding: 10px;
+      font-family: 'Assistant', sans-serif;
+    }
+    .geeks-pattern::before {
+      content: 'GEEKS WATCHLIST GEEKS WATCHLIST GEEKS WATCHLIST GEEKS WATCHLIST GEEKS WATCHLIST GEEKS WATCHLIST GEEKS WATCHLIST GEEKS WATCHLIST';
+      color: rgba(232,121,249,0.14);
+    }
+    .tvtime-pattern::before {
+      content: 'ZAPZAP ZAPZAP ZAPZAP ZAPZAP ZAPZAP ZAPZAP ZAPZAP ZAPZAP ZAPZAP ZAPZAP ZAPZAP ZAPZAP ZAPZAP ZAPZAP ZAPZAP ZAPZAP ZAPZAP ZAPZAP ZAPZAP';
+      color: rgba(96,165,250,0.15);
+    }
+    .climb-pattern::before {
+      content: 'CLIMB ISRAEL CLIMB ISRAEL CLIMB ISRAEL CLIMB ISRAEL CLIMB ISRAEL CLIMB ISRAEL CLIMB ISRAEL CLIMB ISRAEL CLIMB ISRAEL CLIMB ISRAEL';
+      color: rgba(224,169,109,0.15);
+    }
+
     /* ---- ABOUT SECTION ---- */
     #about {
       background: #0a1515;
@@ -628,7 +663,10 @@
       .game-icon-large { font-size: 2.2rem; }
       .chess-pattern { background-size: 24px 24px; background-position: 0 0, 0 12px, 12px -12px, -12px 0; }
       .word-pattern::before, .category-pattern::before, .hirtotim-pattern::before,
+      .geeks-pattern::before, .tvtime-pattern::before, .climb-pattern::before,
       .word-pattern-imposter::before { font-size: 0.8rem; padding: 4px; line-height: 1.8; }
+      #tools { padding: 56px 4vw; }
+      .game-links { flex-direction: column; width: 100%; gap: 6px; }
 
       .game-body { padding: 10px; }
       .game-platform { font-size: 0.62rem; padding: 2px 7px; margin-bottom: 8px; gap: 4px; }
