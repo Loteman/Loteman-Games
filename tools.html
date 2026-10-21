@@ -5,10 +5,27 @@
   <meta name="google-adsense-account" content="ca-pub-8346271386899042" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>כל הכלים | Loteman Games</title>
+  <meta name="description" content="כל הכלים של Loteman Games: Geeks Watchlist למעקב צפייה, ZapZap לטלוויזיה ורדיו בשידור חי, ו-Climb Israel - מדריך הטיפוס הקהילתי של ישראל." />
+  <link rel="canonical" href="https://games.loteman.com/tools" />
+  <meta name="theme-color" content="#0d0d0d" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="/assets/logos/loteman-logo.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Loteman Games" />
+  <meta property="og:title" content="כל הכלים | Loteman Games" />
+  <meta property="og:description" content="כל הכלים של Loteman Games: Geeks Watchlist למעקב צפייה, ZapZap לטלוויזיה ורדיו בשידור חי, ו-Climb Israel - מדריך הטיפוס הקהילתי של ישראל." />
+  <meta property="og:url" content="https://games.loteman.com/tools" />
+  <meta property="og:image" content="https://games.loteman.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Loteman Games - משחקים וכלים" />
+  <meta property="og:locale" content="he_IL" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700;900&family=Assistant:wght@300;400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=6" />
+  <link rel="stylesheet" href="css/styles.css?v=7" />
 </head>
 <body>
 
@@ -29,13 +46,14 @@
   <input
     type="search"
     id="games-search"
+    aria-label="חיפוש"
     class="games-search-input"
     placeholder="🔍  חיפוש כלי..."
   />
   <div class="filter-tabs">
-    <button class="filter-tab active" data-filter="all">הכל</button>
-    <button class="filter-tab" data-filter="web">אתר אינטרנט</button>
-    <button class="filter-tab" data-filter="android">אנדרואיד</button>
+    <button class="filter-tab active" data-filter="all" aria-pressed="true">הכל</button>
+    <button class="filter-tab" data-filter="web" aria-pressed="false">אתר אינטרנט</button>
+    <button class="filter-tab" data-filter="android" aria-pressed="false">אנדרואיד</button>
   </div>
 </div>
 
@@ -117,6 +135,15 @@
 
 </div>
 
+<footer>
+  <span class="footer-copy">כל הזכויות שמורות · © <span id="year"></span> Loteman Games</span>
+  <div class="footer-links">
+    <a href="privacy.html" class="footer-link">מדיניות פרטיות</a>
+    <a href="accessibility.html" class="footer-link">הצהרת נגישות</a>
+    <a href="mailto:lotemangames@gmail.com" class="footer-link">✉ צור קשר</a>
+  </div>
+</footer>
+
 <script src="js/app.js"></script>
 <script>
   const searchInput = document.getElementById('games-search');
@@ -152,8 +179,9 @@
 
   filterTabs.forEach(tab => {
     tab.addEventListener('click', () => {
-      filterTabs.forEach(t => t.classList.remove('active'));
+      filterTabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-pressed', 'false'); });
       tab.classList.add('active');
+      tab.setAttribute('aria-pressed', 'true');
       currentFilter = tab.dataset.filter;
       applyFilters();
     });

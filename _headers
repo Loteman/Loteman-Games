@@ -1,0 +1,13 @@
+# Security headers for every response.
+/*
+  Strict-Transport-Security: max-age=31536000
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# Always revalidate pages so a phone never mixes a new page with old cached files.
+/
+  Cache-Control: no-cache
+/*.html
+  Cache-Control: no-cache
