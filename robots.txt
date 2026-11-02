@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://games.loteman.com/sitemap.xml
+Sitemap: https://loteman.com/sitemap.xml
