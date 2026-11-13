@@ -434,6 +434,27 @@
       font-family: 'Assistant', sans-serif;
     }
 
+    /* ---- KRILLION + PLAY CARDS ---- */
+    .game-thumb-krillion { background: linear-gradient(180deg, #06243a 0%, #031526 100%); }
+    .game-thumb-playcards { background: linear-gradient(135deg, #0d3a26 0%, #082a1b 100%); }
+    .game-card-krillion .game-name { color: #5ec8f2; }
+    .game-card-playcards .game-name { color: #6ee7a3; }
+    .krillion-pattern, .playcards-pattern { position: absolute; inset: 0; overflow: hidden; }
+    .krillion-pattern::before, .playcards-pattern::before {
+      position: absolute; inset: 0;
+      font-size: 1.3rem; font-weight: 900; letter-spacing: 0.15em;
+      line-height: 2.0; word-break: break-all; padding: 10px;
+      font-family: 'Assistant', sans-serif;
+    }
+    .krillion-pattern::before {
+      content: 'קריעליון קריעליון קריעליון קריעליון קריעליון קריעליון קריעליון קריעליון קריעליון קריעליון קריעליון קריעליון קריעליון קריעליון קריעליון קריעליון';
+      color: rgba(94,200,242,0.14);
+    }
+    .playcards-pattern::before {
+      content: 'PLAY CARDS PLAY CARDS PLAY CARDS PLAY CARDS PLAY CARDS PLAY CARDS PLAY CARDS PLAY CARDS PLAY CARDS PLAY CARDS PLAY CARDS PLAY CARDS PLAY CARDS';
+      color: rgba(110,231,163,0.14);
+    }
+
     /* ---- TOOLS SECTION ---- */
     #tools { background: linear-gradient(180deg, #0a1515 0%, var(--black) 100%); }
     .game-links { display: flex; flex-wrap: wrap; gap: 8px; align-self: flex-start; }
@@ -664,6 +685,7 @@
       .chess-pattern { background-size: 24px 24px; background-position: 0 0, 0 12px, 12px -12px, -12px 0; }
       .word-pattern::before, .category-pattern::before, .hirtotim-pattern::before,
       .geeks-pattern::before, .tvtime-pattern::before, .climb-pattern::before,
+      .krillion-pattern::before, .playcards-pattern::before,
       .word-pattern-imposter::before { font-size: 0.8rem; padding: 4px; line-height: 1.8; }
       #tools { padding: 56px 4vw; }
       .game-links { flex-direction: column; width: 100%; gap: 6px; }
