@@ -5,7 +5,7 @@
   <meta name="google-adsense-account" content="ca-pub-8346271386899042" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>כל הכלים | Loteman Games</title>
-  <meta name="description" content="כל הכלים של Loteman Games: Geeks Watchlist למעקב צפייה, ZapZap לטלוויזיה ורדיו בשידור חי, ו-Climb Israel - מדריך הטיפוס הקהילתי של ישראל." />
+  <meta name="description" content="כל הכלים של Loteman Games: Geeks Watchlist למעקב צפייה, ZapZap לטלוויזיה ורדיו בשידור חי, Climb Israel - מדריך הטיפוס הקהילתי של ישראל, ומשחקי הקלפים של לוטמן." />
   <link rel="canonical" href="https://loteman.com/tools" />
   <meta name="theme-color" content="#0d0d0d" />
   <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -14,7 +14,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Loteman Games" />
   <meta property="og:title" content="כל הכלים | Loteman Games" />
-  <meta property="og:description" content="כל הכלים של Loteman Games: Geeks Watchlist למעקב צפייה, ZapZap לטלוויזיה ורדיו בשידור חי, ו-Climb Israel - מדריך הטיפוס הקהילתי של ישראל." />
+  <meta property="og:description" content="כל הכלים של Loteman Games: Geeks Watchlist למעקב צפייה, ZapZap לטלוויזיה ורדיו בשידור חי, Climb Israel - מדריך הטיפוס הקהילתי של ישראל, ומשחקי הקלפים של לוטמן." />
   <meta property="og:url" content="https://loteman.com/tools" />
   <meta property="og:image" content="https://loteman.com/og-image.png" />
   <meta property="og:image:width" content="1200" />
@@ -123,11 +123,22 @@
     </div>
   </div>
 
-  <div class="game-card game-card-soon reveal" id="soon-card" aria-hidden="true">
-    <div class="game-card-soon-inner">
-      <div class="game-card-soon-emoji">🛠️</div>
-      <div class="game-card-soon-title">עוד כלים בדרך</div>
-      <div class="game-card-soon-sub">בקרוב...</div>
+  <div class="game-card game-card-cards reveal" data-platform="web" data-name="משחקי קלפים">
+    <div class="game-thumb game-thumb-cards">
+      <div class="card-pattern"></div>
+      <div class="game-icon-large">🃏</div>
+    </div>
+    <div class="game-body">
+      <div class="game-platform">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        אתר אינטרנט
+      </div>
+      <div class="game-name">משחקי הקלפים של לוטמן 🃏</div>
+      <div class="game-desc">אוסף משחקי קלפים קלאסיים ומקוריים. שעות של כיף עם חברים ומשפחה, ישירות מהדפדפן — ללא התקנה.</div>
+      <a href="https://cardgames.loteman.com/" target="_blank" rel="noopener" class="game-link">
+        פתח באתר
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      </a>
     </div>
   </div>
 
@@ -168,7 +179,6 @@
         card.classList.add('hidden');
       }
     });
-    document.getElementById('soon-card').classList.toggle('hidden', currentFilter !== 'all' || currentSearch !== '');
     noResults.style.display = visible === 0 ? 'block' : 'none';
   }
 
